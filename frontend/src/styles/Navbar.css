@@ -1,0 +1,183 @@
+.navbar {
+  background: transparent;
+  padding: 10px 0 14px;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: none;
+  margin-bottom: 24px;
+  border-radius: 0;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  min-width: 60px;
+  text-align: center;
+  cursor: default;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.toggle-label.active {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.signup-label.active {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.login-label.active {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Toggle Switch Styling */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 8px;
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-label-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 34px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.toggle-slider {
+  content: '';
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-input:checked + .toggle-label-switch {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.toggle-input:checked + .toggle-label-switch .toggle-slider {
+  transform: translateX(26px);
+}
+
+.toggle-input:focus + .toggle-label-switch {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.toggle-input:active + .toggle-label-switch .toggle-slider {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .toggle-container {
+    padding: 8px 12px;
+    gap: 12px;
+  }
+
+  .toggle-label {
+    font-size: 12px;
+    min-width: 50px;
+  }
+
+  .toggle-switch {
+    width: 52px;
+    height: 30px;
+  }
+
+  .toggle-slider {
+    height: 22px;
+    width: 22px;
+  }
+
+  .toggle-input:checked + .toggle-label-switch .toggle-slider {
+    transform: translateX(22px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 12px 15px;
+  }
+
+  .navbar-title {
+    font-size: 18px;
+  }
+
+  .toggle-container {
+    gap: 10px;
+  }
+
+  .toggle-label {
+    font-size: 11px;
+    min-width: 45px;
+  }
+}
