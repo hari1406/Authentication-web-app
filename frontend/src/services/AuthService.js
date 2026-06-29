@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/auth";
+const API = "https://authentication-backend-production-6791.up.railway.app/api/auth";
 
 export const signup = (data) => {
   return axios.post(`${API}/signup`, data);
