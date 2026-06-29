@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin("*")
+@CrossOrigin("https://authentication-web-app-steel.vercel.app/")
 public class AuthController {
 
     @Autowired
